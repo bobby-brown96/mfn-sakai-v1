@@ -6,7 +6,7 @@ export default {
     };
   },
   methods: {
-    onClick(event) {
+    onClick(event: { preventDefault: () => void }) {
       this.expanded = !this.expanded;
       event.preventDefault();
     }
@@ -45,6 +45,4 @@ export default {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

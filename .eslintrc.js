@@ -5,10 +5,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: [
-    '@nuxtjs/eslint-config-typescript',
-    '@whoj'
-  ],
+  extends: ['@nuxtjs/eslint-config-typescript', '@whoj'],
   parserOptions: {
     ecmaVersion: 2021
   },

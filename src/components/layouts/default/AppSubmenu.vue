@@ -50,7 +50,11 @@ export default {
 <template>
   <ul v-if="items">
     <template v-for="(item, i) of items">
-      <li v-if="visible(item) && !item.separator" :key="item.label || i" :class="[{ 'layout-menuitem-category': root, 'active-menuitem': activeIndex === i && !item.to && !item.disabled }]" role="none">
+      <li
+        v-if="visible(item) && !item.separator" :key="item.label || i"
+        :class="[{ 'layout-menuitem-category': root, 'active-menuitem': activeIndex === i && !item.to && !item.disabled }]"
+        role="none"
+      >
         <template v-if="root">
           <div class="layout-menuitem-root-text">
             {{ item.label }}
@@ -59,15 +63,9 @@ export default {
         </template>
         <template v-else>
           <NuxtLink
-            v-if="item.to"
-            v-ripple
-            :to="item.to"
-            :class="[item.class, 'p-ripple', { 'p-disabled': item.disabled }]"
-            :style="item.style"
-            :target="item.target"
-            exact
-            role="menuitem"
-            @click="onMenuItemClick($event, item, i)"
+            v-if="item.to" v-ripple :to="item.to"
+            :class="[item.class, 'p-ripple', { 'p-disabled': item.disabled }]" :style="item.style" :target="item.target"
+            exact role="menuitem" @click="onMenuItemClick($event, item, i)"
           >
             <i :class="item.icon" />
             <span>{{ item.label }}</span>
@@ -75,13 +73,9 @@ export default {
             <Badge v-if="item.badge" :value="item.badge" />
           </NuxtLink>
           <a
-            v-if="!item.to"
-            v-ripple
-            :href="item.url || '#'"
+            v-if="!item.to" v-ripple :href="item.url || '#'"
             :style="item.style"
-            :class="[item.class, 'p-ripple', { 'p-disabled': item.disabled }]"
-            :target="item.target"
-            role="menuitem"
+            :class="[item.class, 'p-ripple', { 'p-disabled': item.disabled }]" :target="item.target" role="menuitem"
             @click="onMenuItemClick($event, item, i)"
           >
             <i :class="item.icon" />
@@ -90,7 +84,10 @@ export default {
             <Badge v-if="item.badge" :value="item.badge" />
           </a>
           <transition name="layout-submenu-wrapper">
-            <AppSubmenu v-show="activeIndex === i" :items="visible(item) && item.items" @menuitem-click="$emit('menuitem-click', $event)" />
+            <AppSubmenu
+              v-show="activeIndex === i" :items="visible(item) && item.items"
+              @menuitem-click="$emit('menuitem-click', $event)"
+            />
           </transition>
         </template>
       </li>
@@ -103,6 +100,4 @@ export default {
   </ul>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

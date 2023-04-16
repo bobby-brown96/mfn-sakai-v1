@@ -7,14 +7,16 @@ export default {
     }
   },
   methods: {
-    onMenuToggle(event) {
+    onMenuToggle(event: any) {
       this.$emit('menu-toggle', event);
     },
-    onTopbarMenuToggle(event) {
+    onTopbarMenuToggle(event: any) {
       this.$emit('topbar-menu-toggle', event);
     },
     topbarImage() {
-      return this.$appState.darkTheme ? '/images/logo-white.svg' : '/images/logo-dark.svg';
+      return this.$appState.darkTheme
+        ? '/images/logo-white.svg'
+        : '/images/logo-dark.svg';
     }
   }
 };
@@ -26,7 +28,10 @@ export default {
       <img alt="Logo" :src="topbarImage()">
       <span>SAKAI</span>
     </NuxtLink>
-    <button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle">
+    <button
+      class="p-link layout-menu-button layout-topbar-button"
+      @click="onMenuToggle"
+    >
       <i class="pi pi-bars" />
     </button>
 

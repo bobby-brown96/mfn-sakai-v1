@@ -18,7 +18,7 @@ export default {
     }
   },
   methods: {
-    onMenuItemClick(event) {
+    onMenuItemClick(event: any) {
       this.$emit('menuitem-click', event);
     },
     bannerImage() {
@@ -34,6 +34,4 @@ export default {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
