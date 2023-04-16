@@ -2,10 +2,13 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2021: true,
     node: true
   },
-  extends: ['@nuxtjs/eslint-config-typescript', '@whoj'],
+  extends: [
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:nuxt/recommended',
+    'prettier',
+  ],
   parserOptions: {
     ecmaVersion: 2021
   },
@@ -25,7 +28,8 @@ module.exports = {
     'vue/no-template-shadow': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/no-reserved-component-names': 'off',
-    '@typescript-eslint/no-unused-vars': 'off'
+    '@typescript-eslint/no-unused-vars': 'off',
+    'vue/no-setup-props-destructure':'off'
   },
   overrides: [
     {

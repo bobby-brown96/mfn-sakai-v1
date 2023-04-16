@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
-        // eslint-disable-next-line quote-props
         { 'http-equiv': 'x-ua-compatible', content: 'IE=edge' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
       ],
