@@ -1,0 +1,36 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[markdown]": {
+    "editor.rulers": [
+      80
+    ]
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "markdown",
+    "vue"
+  ],
+  "stylelint.validate": [
+    "scss",
+    "vue"
+  ],
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "workbench.colorTheme": "Colorful-Dark-Theme",
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
+}
