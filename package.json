@@ -2,7 +2,7 @@
   "name": "sakai-nuxt",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
+    "dev": "nuxi dev --port=4000",
     "build": "nuxi build",
     "generate": "nuxi generate",
     "prepare": "nuxi cleanup && nuxi prepare",
