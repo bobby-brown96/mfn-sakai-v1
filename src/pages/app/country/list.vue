@@ -53,44 +53,45 @@
     </div>
 </template>
 
-<script  lang="ts">
+<script lang="ts">
 import { CountryMfn } from '~~/services/mfn';
 import { useApi } from '~/composables/useApi';
 import { FilterMatchMode, FilterOperator } from 'primevue/api';
 
 export default {
-    data() {
-        return {
-            country1: null,
-            filters1: null,
-            loading1: true,
-        }
+  data() {
+    return {
+      country1: null,
+      filters1: null,
+      loading1: true,
+    
+    };
+  },
+  countryService: null, // set initial value to null here
+  created() {
+    const apiComp = useApi();
+    this.countryService = new CountryMfn(apiComp);
+    this.initFilters1();
+  },
+  mounted() {
+    this.countryService.getAllCountries().then((data) => {
+      this.country1 = data;
+      this.loading1 = false;
+    });
+  },
+  methods: {
+    initFilters1() {
+      this.filters1 = {
+        global: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        name: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
+        code: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
+      };
     },
-    countryService: null,
-    created() {
-        const apiComp = useApi()
-        this.countryService = new CountryMfn(apiComp)
-        this.initFilters1()
-    },
-    mounted() {
-        this.countryService.getAllCountries().then((data) => {
-            this.country1 = data
-            this.loading1 = false
-        })
-    },
-    methods: {
-        initFilters1() {
-            this.filters1 = {
-                'global': { value: null, matchMode: FilterMatchMode.CONTAINS },
-                'name': { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
-                'code': { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
-            }
-        },
-        clearFilter1() {
+    clearFilter1() {
       this.initFilters1();
     },
-    }
-}
+  },
+};
 
 
 
