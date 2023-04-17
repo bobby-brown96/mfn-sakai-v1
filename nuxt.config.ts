@@ -72,7 +72,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: 'vercel'
+    preset: 'render-com'
   },
 
   srcDir: 'src/',
