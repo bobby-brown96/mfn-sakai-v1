@@ -1,14 +1,14 @@
 import type { AxiosInstance } from 'axios'
 import { MfnService } from './mfn.service'
 
-export class CurrencyMfn extends MfnService {
+export class CountryMfn extends MfnService {
   constructor(protected api: AxiosInstance) {
     super(api)
   }
 
-  async getAllCurrencies() {
+  async getAllCountries() {
     return await this._get({
-      path: '/lists/currencies/list',
+      path: '/lists/countries/list',
     })
   }
 }

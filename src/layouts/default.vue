@@ -32,7 +32,7 @@ export default defineComponent({
           label: 'Currencies & Countries',
           items: [
             { label: 'List Currencies', icon: 'pi pi-fw pi-eye', to: '/app/currency/list', },
-            { label: 'List Countries', icon: 'pi pi-fw pi-eye', to: '/demo/blocks', },
+            { label: 'List Countries', icon: 'pi pi-fw pi-eye', to: '/app/country/list',},
           ]
         },
 

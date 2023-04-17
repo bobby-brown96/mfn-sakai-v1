@@ -61,7 +61,7 @@ onMounted(() => {
           <div>
             <span class="block text-500 font-medium mb-3">Orders</span>
             <div class="text-900 font-medium text-xl">
-              152
+              155
             </div>
           </div>
           <div class="flex align-items-center justify-content-center bg-blue-100 border-round" style="width:2.5rem;height:2.5rem">
