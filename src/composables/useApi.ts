@@ -2,13 +2,13 @@ import axios, { type RawAxiosRequestHeaders, type AxiosInstance } from 'axios'
 
 let api: AxiosInstance
 
-function createApi() {
+function createApi(): AxiosInstance {
   api = axios.create({})
 
   return api
 }
 
-export function useApi() {
+export function useApi(): AxiosInstance {
   if (!api) {
     createApi()
   }

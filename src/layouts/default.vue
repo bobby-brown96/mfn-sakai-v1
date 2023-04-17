@@ -30,89 +30,20 @@ export default defineComponent({
 
         {
           label: 'Currencies & Countries',
-          items:[
-          { label: 'List Currencies', icon: 'pi pi-fw pi-eye', to: '/demo/blocks', },
-          { label: 'List Countries', icon: 'pi pi-fw pi-eye', to: '/demo/blocks', },
+          items: [
+            { label: 'List Currencies', icon: 'pi pi-fw pi-eye', to: '/app/currency/list', },
+            { label: 'List Countries', icon: 'pi pi-fw pi-eye', to: '/demo/blocks', },
           ]
         },
 
         {
           label: 'Accounts',
-          items:[
-          { label: 'List Accounts', icon: 'pi pi-fw pi-eye', to: '/demo/blocks', },
-          ]
-        },
-        {
-          label: 'UI Blocks',
           items: [
-            { label: 'Free Blocks', icon: 'pi pi-fw pi-eye', to: '/demo/blocks', badge: 'NEW' },
-            { label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: 'https://www.primefaces.org/primeblocks-vue' }
+            { label: 'List Accounts', icon: 'pi pi-fw pi-eye', to: '/demo/blocks', },
           ]
         },
-        {
-          label: 'Pages',
-          icon: 'pi pi-fw pi-clone',
-          items: [
-            { label: 'Crud', icon: 'pi pi-fw pi-user-edit', to: '/demo/pages/crud' },
-            { label: 'Timeline', icon: 'pi pi-fw pi-calendar', to: '/demo/pages/timeline' },
-            { label: 'Landing', icon: 'pi pi-fw pi-calendar', to: '/demo/pages/landing' },
-            { label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login' },
-            { label: 'Not Found', icon: 'pi pi-fw pi-exclamation-circle', to: '/notfound' },
-            { label: 'Empty', icon: 'pi pi-fw pi-circle-off', to: '/demo/pages/empty' }
-          ]
-        },
-        {
-          label: 'Menu Hierarchy',
-          icon: 'pi pi-fw pi-search',
-          items: [
-            {
-              label: 'Submenu 1',
-              icon: 'pi pi-fw pi-bookmark',
-              items: [
-                {
-                  label: 'Submenu 1.1',
-                  icon: 'pi pi-fw pi-bookmark',
-                  items: [
-                    { label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark' },
-                    { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                    { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' }
-                  ]
-                },
-                {
-                  label: 'Submenu 1.2',
-                  icon: 'pi pi-fw pi-bookmark',
-                  items: [
-                    { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' },
-                    { label: 'Submenu 1.2.2', icon: 'pi pi-fw pi-bookmark' }
-                  ]
-                }
-              ]
-            },
-            {
-              label: 'Submenu 2',
-              icon: 'pi pi-fw pi-bookmark',
-              items: [
-                {
-                  label: 'Submenu 2.1',
-                  icon: 'pi pi-fw pi-bookmark',
-                  items: [
-                    { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
-                    { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' },
-                    { label: 'Submenu 2.1.3', icon: 'pi pi-fw pi-bookmark' }
-                  ]
-                },
-                {
-                  label: 'Submenu 2.2',
-                  icon: 'pi pi-fw pi-bookmark',
-                  items: [
-                    { label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' },
-                    { label: 'Submenu 2.2.2', icon: 'pi pi-fw pi-bookmark' }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
+
+
         {
           label: 'Get Started',
           items: [
